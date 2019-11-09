@@ -7,7 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ComposeActivity">
-
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="140"
+        app:counterTextAppearance="@style/TextLabel"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textColorHint="@color/design_default_color_primary_dark"
+       >
+        >
         <EditText
             android:id="@+id/etCompose"
             android:layout_width="match_parent"
@@ -20,14 +29,15 @@
             android:inputType="textMultiLine"
             android:minLines="5"
             />
+        <Button
+            android:id="@+id/btnTweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etCompose"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Tweet" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnTweet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCompose"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:text="Tweet" />
 </RelativeLayout>
